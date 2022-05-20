@@ -10,54 +10,58 @@
 </head>
 <body>
     <header>
-        <h1>Invoice creator</h1>
-        <p>Thanks for choosing GoodCorp, LLC!</p>
+        <div class="container">
+            <h1>Invoice creator</h1>
+            <p>Thanks for choosing GoodCorp, LLC!</p>
+        </div>
     </header>
     <section>
-        <div class="btn-container">
-            <button>Wash Car: $10</button>
-            <button>Mow Lawn: $20</button>
-            <button>Pull Weeds: $30</button>
+        <div class="container">
+            <div class="btn-container">
+                <button>Wash Car: $10</button>
+                <button>Mow Lawn: $20</button>
+                <button>Pull Weeds: $30</button>
+            </div>
+            <article class="content">
+                <div>
+                    <h4>TASK</h4>
+                    <h4>TOTAL</h4>
+                </div>
+                <div>
+                    <div class="contentDisplay">
+                        <h2>Wash Car</h2>
+                        <small>Remove</small>
+                    </div>
+                    <h2><span>$</span>10</h2>
+                </div>
+                <div>
+                    <div class="contentDisplay">
+                        <h2>Mow Lawn</h2>
+                        <small>Remove</small>
+                    </div>
+                    <h2><span>$</span>20</h2>
+                </div>
+                <div>
+                    <div class="contentDisplay">
+                        <h2>Pull Weeds</h2>
+                        <small>Remove</small>
+                    </div>
+                    <h2><span>$</span>30</h2>
+                </div>
+            </article>
+            <hr>
+            <article class="total">
+                <div>
+                    <h4>NOTES</h4>
+                    <h4>TOTAL AMOUNT</h4>
+                </div>
+                <div class="totalInfo">
+                    <small>We accept cash, credit card, or PayPal</small>
+                    <h1>$60</h1>
+                </div>
+            </article>
+            <button class="send-btn"><img src="/messageIcon.svg" alt="messageIcon">Send invoice</button>
         </div>
-        <article>
-            <div>
-                <h4>TASK</h4>
-                <h4>TOTAL</h4>
-            </div>
-            <div>
-                <div>
-                    <h2>Wash Car</h2>
-                    <p>Remove</p>
-                </div>
-                <h2><span>$</span>10</h2>
-            </div>
-            <div>
-                <div>
-                    <h2>Mow Lawn</h2>
-                    <p>Remove</p>
-                </div>
-                <h2><span>$</span>20</h2> 
-            </div>
-            <div>
-                <div>
-                    <h2>Pull Weeds</h2>
-                    <p>Remove</p>
-                </div>
-                <h2><span>$</span>30</h2> 
-            </div>
-        </article>
-        <hr>
-        <article>
-            <div>
-                <h4>NOTES</h4>
-                <h4>TOTAL AMOUNT</h4>
-            </div>
-            <div>
-                <p>We accept cash, credit card, or PayPal</p>
-                <h1>$60</h1>
-            </div>
-        </article>
-        <button><img src="/messageIcon.svg" alt="messageIcon">Send invoice</button>
     </section>
     <script src="/script.js"></script>
 </body>
