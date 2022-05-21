@@ -50,6 +50,11 @@ h1 {
     color: #4A4E74;
 }
 
+.btn-container > *:hover {
+    cursor: pointer;
+}
+
+
 article > * {
     display: flex;
     justify-content: space-between;
