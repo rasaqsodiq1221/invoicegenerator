@@ -14,25 +14,45 @@ const services = [
 const button1 = document.getElementById('btn1-el');
 const button2 = document.getElementById('btn2-el');
 const button3 = document.getElementById('btn3-el');
+let content = document.querySelector('.content')
 let requiredService = [];
 
 button1.addEventListener('click', function(){
     requiredService.push(services[0])
+    displayService() 
     console.log(requiredService)
 })
 
 button2.addEventListener('click', function(){
     requiredService.push(services[1])
+    displayService() 
     console.log(requiredService)
     
 })
 
 button3.addEventListener('click', function(){
     requiredService.push(services[2])
+    displayService() 
     console.log(requiredService)
 })
 
+function displayService() {
+    let serviceList = " ";
+    for (let i = 0; i < requiredService.length; i++) {
+        serviceList += `
+                <div>
+                    <div class="contentDisplay">
+                        <h2>${requiredService[i].service}</h2>
+                        <small>Remove</small>
+                    </div>
+                    <h2><span>$</span>${requiredService[i].price}</h2>
+                </div>
+         
+         `
+    }
 
+    content.innerHTML = serviceList
+}
 
 
 /* const buttons = document.querySelectorAll('.btn-el');
