@@ -14,26 +14,26 @@ const services = [
 const button1 = document.getElementById('btn1-el');
 const button2 = document.getElementById('btn2-el');
 const button3 = document.getElementById('btn3-el');
+const removeItem = document.getElementsByClassName('removeItem');
 let content = document.querySelector('.content')
 let requiredService = [];
 
 button1.addEventListener('click', function(){
     requiredService.push(services[0])
     displayService() 
-    console.log(requiredService)
+    this.disabled = true;
 })
 
 button2.addEventListener('click', function(){
     requiredService.push(services[1])
     displayService() 
-    console.log(requiredService)
-    
+    this.disabled = true;  
 })
 
 button3.addEventListener('click', function(){
     requiredService.push(services[2])
     displayService() 
-    console.log(requiredService)
+    this.disabled = true;
 })
 
 function displayService() {
@@ -43,7 +43,7 @@ function displayService() {
                 <div>
                     <div class="contentDisplay">
                         <h2>${requiredService[i].service}</h2>
-                        <small>Remove</small>
+                        <small class="removeItem">Remove</small>
                     </div>
                     <h2><span>$</span>${requiredService[i].price}</h2>
                 </div>
@@ -52,6 +52,11 @@ function displayService() {
     }
 
     content.innerHTML = serviceList
+}
+
+function total() {
+    let total = " ";
+    
 }
 
 
